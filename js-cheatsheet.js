@@ -142,11 +142,40 @@ colors[0]; // "red"
 // They have a length:
 colors.length; //3
 
+// Arrays within arrays
+// Example: 
+const colourOne = ["red", "orange", "yellow"];
+const colourTwo = ["black", "pink", "blue"];
+const colourThree = ["violet", "white", "yellow"];
+
+const colourSchemes = [colourOne, colourTwo, colourThree];
+
+console.log(colourSchemes) 
+//(3) [Array(3), Array(3), Array(3)]
+// 0 : (3) ['red', 'orange', 'yellow']
+// 1 : (3) ['black', 'pink', 'blue']
+// 2 : (3) ['violet', 'white', 'yellow']
+// length: 3 
+
 // Important array methods:
+
 //push(value) - adds value to the END of an array
+// Example:
+let movieLine = ["tom", "nancy"]
+movieLine[2] = "pablo" //too long
+//so instead use push() method:
+movieLine.push('pablo')
+//returns a new array ["tom", "nancy", "pablo"]
+
 //pop() - removes and returns last value in array
+// Example:
+movieLine.pop()
+//returns "pablo"
 
 //unshift(val) - adds value to START of an array
+movieLine.unshift("VIP")
+//returns ["VIP", "tom", "nancy", "pablo"]
+
 //shift() - removes and returns first element in an array
 
 // To make an object literal------------------------------------------------//

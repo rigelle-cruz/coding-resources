@@ -20,3 +20,35 @@ console.log(msg.slice(5, 10))
 let expression = "hello how are you?"
 expression.replace("hello", "hey!")
 //returns "hey! how are you?"
+
+// .splice(start, deleteCount, item1, item2, ...)-------//
+// can insert and remove multiple things
+
+// .sort()----------------------------------------------//
+// when using .sort() = it sorts the first letter and first numerical value of each element in acending order
+//Example:
+const months = ['March', 'Jan', 'Feb', 'Dec'];
+months.sort();
+console.log(months);
+// Expected output: Array ["Dec", "Feb", "Jan", "March"] 
+// D, F, J, M
+
+const array1 = [1, 30, 4, 21, 100000];
+array1.sort();
+console.log(array1);
+// Expected output: Array [1, 100000, 21, 30, 4]
+// 1, 1, 2, 3, 4
+
+//You can sort an array of numbers in ascending or descending order
+
+//ascending
+function compareNumbers(a, b) {
+  return a - b;
+}
+array1.sort(compareNumbers)
+
+//descending
+function compareNumbers(a, b) {
+  return b - a;
+}
+array1.sort(compareNumbers)
