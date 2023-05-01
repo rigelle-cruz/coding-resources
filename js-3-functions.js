@@ -44,3 +44,11 @@ function add(x, y) {
 }
 
 add(5, 1)// returns 15
+
+//FUNCTION EXPRESSIONS------------------------------------------------------//
+// storing a function in a variable 
+//Example:
+const multiply = function (x, y) {
+  return x * y;
+}
+multiply(5, 5) // returns 25
