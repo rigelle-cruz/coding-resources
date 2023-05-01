@@ -195,6 +195,18 @@ dog["age"]; //7
 dog.breed = "mutt";
 dog["age"] = 8;
 
+// Nesting Arrays & Objects-------------------------------------------------//
+// arrays and objects usually go along side each other
+// Example:
+const comments = [
+  {username: "Tammy", text: "lolololol", votes: 9},
+  {username:"FishBoi", text: "glob glob", votes: 12378}
+]
+
+// To access 
+// Example:
+comments[1].text // "glob glob"
+
 // Conditionals-------------------------------------------------------------//
 // if 
 // Example:
