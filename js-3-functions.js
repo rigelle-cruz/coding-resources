@@ -121,7 +121,7 @@ const isEvenFour = num => ( //implicit return
 
 const isEvenFive = num => num % 2 === 0; //one-liner implicit return
 
-// Implicit return examples:
+// More implicit return examples:
 const rollDie = () => (
     Math.floor(Math.random() * 6) + 1
 )
@@ -157,3 +157,40 @@ const movies = [
 const newMovies = movies.map(movie => (
     `${movie.title} - ${movie.score / 10}`
 ))
+
+
+//DEFAULT PARAMETERS--------------------------------------------------------//
+ 
+// Example:
+function rollDie(numSides = 6) {
+  return Math.floor(Math.random() * numSides) + 1
+}
+// when rollDie() is called without any numbers it rolls the default no. 6
+
+// Example:
+// when a person only provides a name without a msg 
+function greet(person, msg = "Hey there") {
+  console.log(`${msg}, ${person}!`)
+}
+
+greet("Hellooooo!", "Bob") // Hellooooo!, Bob!
+greet("Bob") // Hey there, Bob!
+
+
+//SPREAD ------------------------------------------------------------------//
+
+// expands an iterable (array, string, etc.) into a list of arguments
+// takes as many arguments we want
+
+// Example:
+const numbers = [9, 3, 2, 8];
+Math.max(nums); //NaN (not a number) doesn't know what to do
+// Use spread ... !!!
+Math.max(...nums); //67
+// same as calling: Math.max(9, 3, 2, 8)
+
+let string = "what"
+
+const cap = (...s) => string.toUpperCase()
+
+console.log(cap(string))
