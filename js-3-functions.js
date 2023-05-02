@@ -52,3 +52,108 @@ const multiply = function (x, y) {
   return x * y;
 }
 multiply(5, 5) // returns 25
+
+//HIGHER ORDER FUNCTIONS----------------------------------------------------//
+
+// functions as arguments
+// Example:
+function callTwice(func) {
+  func();
+  func();
+}
+
+function laugh() {
+  console.log("HAHAHAHAHAHHAHAHAHAHA");
+}
+callTwice(laugh)
+
+// Another Exmaple:
+function callTenTimes(f) {
+  for (let i = 0; i < 10; i++) {
+    f()
+  }
+}
+
+function rollDie() {
+  const roll = Math.floor(Math.random() * 6) + 1
+  console.log(roll)
+}
+callTwice(rollDie) //executes twice
+
+callTenTimes(rollDie) // executes 10 times
+
+//DEFINING FUNCTIONS--------------------------------------------------------//
+// shorthand way of adding methods
+// Example:
+const math = {
+  blah: "Hi",
+  add(x, y) {
+    return x + y;
+  },
+  multiply(x, y) {
+    return x * y;
+  }
+}
+math.add(50, 60) //110
+math.multiply(4, 2) //8
+
+//ARROW FUNCTIONS-----------------------------------------------------------//
+
+// compact alternative
+
+// different ways to write the same function
+// Example:
+const isEvenOne = function (num) { //regular function expression
+  return num % 2 === 0;
+}
+
+const isEvenTwo = (num) => { //arrow function with parens around param
+  return num % 2 === 0;
+}
+
+const isEvenThree = num => { //no parens around param
+  return num % 2 === 0;
+}
+
+const isEvenFour = num => ( //implicit return
+  num % 2 === 0
+);
+
+const isEvenFive = num => num % 2 === 0; //one-liner implicit return
+
+// Implicit return examples:
+const rollDie = () => (
+    Math.floor(Math.random() * 6) + 1
+)
+
+const add = (a, b) => a + b
+
+// Example:
+const movies = [
+    {
+        title: 'Amadeus',
+        score: 99
+    },
+    {
+        title: 'Stand By Me',
+        score: 85
+    },
+    {
+        title: 'Parasite',
+        score: 95
+    },
+    {
+        title: 'Alien',
+        score: 90
+    }
+]
+
+// const newMovies = movies.map(function (movie) {
+//     return `${movie.title} - ${movie.score / 10}`
+// })
+
+
+// IMPLICIT RETURN
+const newMovies = movies.map(movie => (
+    `${movie.title} - ${movie.score / 10}`
+))
