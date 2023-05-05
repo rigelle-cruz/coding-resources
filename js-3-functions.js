@@ -1,5 +1,5 @@
 //=========================================================================//
-//-------------------------------FUNCTIONS---------------------------------// 
+//------------------------------ FUNCTIONS --------------------------------// 
 //=========================================================================//
 
 // Functions allow us to write reusable, modular code
@@ -189,8 +189,19 @@ Math.max(nums); //NaN (not a number) doesn't know what to do
 Math.max(...nums); //67
 // same as calling: Math.max(9, 3, 2, 8)
 
-let string = "what"
+//Example:
+const cats = ["blue", "scout", "rocket"];
+const dogs = ["rusty", "wyatt"];
 
-const cap = (...s) => string.toUpperCase()
+const allPets = [...cats, ...dogs]
 
-console.log(cap(string))
+
+//REST PARAMETERS ---------------------------------------------------------//
+
+// "the rest"
+// Example:
+function raceResults(gold, silver, ...everyoneElse) {
+  console.log(`GOLD MEDAL GOES TO: ${gold}`)
+  console.log(`SILVER MEDAL GOES TO: ${silver}`)
+  console.log(`AND THANKS TO EVERYONE ELSE: ${everyoneElse}`)
+}

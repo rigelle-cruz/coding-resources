@@ -2,6 +2,7 @@
 //--------------------------------LOOPS------------------------------------// 
 //=========================================================================//
 
+
 // for---------------------------------------------------------------------//
 
 // syntax:
@@ -63,7 +64,79 @@ for (let i = 0; i < seatingChart.length; i++) {
   }
 }
 
+
+// forEach-----------------------------------------------------------------//
+
+// calls the function once per element in the array
+// accepts a callback function
+
+// Example: 
+
+const nums = [9, 8, 7, 6, 5, 4, 3, 2, 1];
+
+nums.forEach( function (n){
+  console.log(n * n) //prints: 81, 64, 49, 36, 25, 16, 9, 4, 1
+});
+
+nums.forEach(function (i) {
+  if (i % 2 === 0) {
+    console.log(i) //prints: 8, 6, 4, 2
+  }
+})
+
+// Another Example:
+nums.forEach(print) 
+
+//prints out the even numbers from the nums array
+nums.forEach(function (el) {
+  if(el % 2 === 0) {
+    console.log(el)
+  }
+})
+
+
+// Example:
+const movies = [
+  {
+      title: 'Amadeus',
+      score: 99
+  },
+  {
+      title: 'Stand By Me',
+      score: 85
+  },
+  {
+      title: 'Parasite',
+      score: 95
+  },
+  {
+      title: 'Alien',
+      score: 90
+  }
+]
+
+movies.forEach(function (movie) {
+  console.log(`${movie.title} - ${movie.score}/100`)
+})
+
+// To retrieve every second item in an array:
+// Using two parameters
+// Automatically counts each item
+// Example:
+
+function everySecondItem(array){
+  let newArray = []
+  array.forEach((item, i) => {
+    if(i % 2 == 1) {
+      newArray.push(item)
+    }
+  })
+  return newArray
+}
+-[p09 ]
+
 // while-------------------------------------------------------------------//
+
 // continue running as long as the test condition is true
 // Example:
 let num = 0;
@@ -88,7 +161,9 @@ console.log("CONGRATS YOU GOT THE SECRET!!!")
 // while the guess is wrong, it still continues the loop 
 // until condition is satified
 
+
 // For...Of----------------------------------------------------------------//
+
 // for (variable of iterable) {
 //   statement
 // }
@@ -128,6 +203,7 @@ for (let subreddit of subreddits) {
 
 
 // Iterating Objects-------------------------------------------------------//
+
 // for...in
 // Example:
 
@@ -163,3 +239,4 @@ for (let score of scores) {
   total += score;
 }
 console.log(total / scores.length) // gets the average score 
+

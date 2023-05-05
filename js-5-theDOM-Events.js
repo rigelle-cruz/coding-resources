@@ -98,14 +98,30 @@ form.addEventListener("submit", function (e) {
   console.log("FORM SUBMITTED!") // stays in the same location 
 });
 
+// Input & Change Events -------------------------------------------------//
+
+// changes the h1 text as you input the data
+// Example:
+input.addEventListener("input", function (e) {
+  h1.innerText = input.value;
+});
+
 // Form Events -----------------------------------------------------------//
 
 // in HTML:
-// <form action="/dataCollection"  => where data is sent to    
+// <html>
+// <body>
+//    <form action="/dataCollection"  => where data is sent to    
 //      <input type="text"  name="username" placeholder="username">
 //      <input type="text"  name="tweet" placeholder="tweet">
 //      <button>Post Tweet</button>
-// </form>
+//    </form>
+//    <h2>Tweets:</h2>
+//    <ul id="tweets">
+//    </ul>
+//    <script src="app.js"></script>
+// </body>
+// </html>
 
 // in JS
 const tweetForm = document.querySelector("#tweetForm");
@@ -118,8 +134,8 @@ tweetForm.addEventListener("submit", function(e) {
   const usernameInput = tweetForm.elements.username.value;
   const tweetInput = tweetForm.elements.tweet;
   addTweet(usernameInput.value, tweetInput.value)
-  usernameInput.value = "",
-  tweetInput.value = "",
+  usernameInput.value = ""
+  tweetInput.value = "";
 });
 
 const addTweet = (username, tweet) => {
@@ -134,3 +150,19 @@ const addTweet = (username, tweet) => {
 // note: can inspect element console.dir(tweetForm)
 //      access to a property "elements"
 //      shows all the elements of the form
+
+
+// Event Bubbling --------------------------------------------------------//
+// when an event happens on an element, it first runs the handlers on it,
+// then on its parent, then all the way up on other ancestors
+
+// event.stopPropagation()
+
+// prevents further propagation of the current event 
+// in the capturing and bubbling phase
+
+// DOES NOT PREVENT ANY DEFAULT BEHAVIOURS!!
+
+// Event Delegation ------------------------------------------------------//
+// a pattern that allows you to write cleaner code, and create
+// fewer event listeners with similar logic
