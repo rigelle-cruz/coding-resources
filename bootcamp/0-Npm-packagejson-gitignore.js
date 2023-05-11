@@ -35,6 +35,8 @@
 // Contains - Meta-data, Dependencies, All package installed locally
 // Generated and updated with npm install
 
+//note: keeps track of the latest working version of our software
+
 
 // Project Dependencies ----------------------------------------------------//
 
@@ -45,3 +47,13 @@
 // Installed to node-modules folder
 
 // note: will show in the package.json
+
+// .gitignore --------------------------------------------------------------//
+
+// By default, git will save every file
+// Use .gitignore file to ignore files and folders
+// contains names and files you want to ignore
+// Example:
+      // node_modules
+      // bundle.js (build files)
+      // Generated files
