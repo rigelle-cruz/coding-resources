@@ -1,0 +1,16 @@
+{
+  "name": "express-web-server",
+  "version": "1.0.0",
+  "description": "-Setup -`npm init`  - Install Express - Create the server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
