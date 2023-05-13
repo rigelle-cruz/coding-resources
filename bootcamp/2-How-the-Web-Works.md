@@ -68,5 +68,5 @@
 
  <br />
 
-![Screenshot example](./images/client-server-interaction)
+![Screenshot example](./images/client-server-interaction) 
 
