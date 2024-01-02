@@ -1,55 +1,43 @@
-## Promises 
+# Promises 🌟
 
+### Synchronous (Blocking Code) ⚙️
 
-### Synchronous (blocking code)
-
-- A line of code must be read and executed before another line is read
+- Code execution proceeds line by line
 - Assigning values to variables
 - Arithmetic operations (addition, multiplications)
 - Array methods
 - Creating objects
 
+### Asynchronous (Non-blocking Code) ⏳
 
-### Asynchronous (non-blocking code)
-
-- File system (reading & writing to files)
+- File system operations (reading & writing to files)
 - Network calls (HTTP Requests)
 - Database queries (Create, Read, Update, Delete)
 
-
-### Javascript runtime
+### Javascript Runtime 🚀
 
 - Node.js
 - Browser
 
-
-### async/await
-
-- Example:
+### Async/Await Example ✨
 
 ```javascript
-
 import fs from 'node:fs/promises'
 
 async function getEmployees() {
   const data = await fs.readFile('employee-kiwi-saver.json', 'utf-8')
-  const employees = JSON.parse(data) // 
+  const employees = JSON.parse(data)
   console.log(employees)
 }
 
 getEmployees()
-
 ```
 
-### Chaining two promises with async/await
-
-- Example: 
+### Chaining Two Promises with Async/Await ✨
 
 ```javascript
-
 const utils = require('./utils')
 
-// asyn/await is a syntactic sugar for promises
 async function viewContributions() {
   const alice = await utils.getContributions('Alice')
   console.log(`Alice has contributed ${alice} times`)
@@ -62,24 +50,20 @@ async function viewContributions() {
 }
 
 viewContributions()
-
-
 ```
 
-### Chaining two promises with ```.then```
+### Chaining Two Promises with `.then` 🔄
 
-- Using ```.then```
+- Using `.then`
 - Example:
 
 ```javascript
-
 const utils = require('./utils')
 
 utils
   .getContributions('Alice')
   .then((contributions) => {
     console.log(`Alice has contributed ${contributions} times`)
-
     return utils.getContributions('Bob')
   })
   .then((contributions) => {
@@ -89,5 +73,4 @@ utils
   .then((contributions) => {
     console.log(`Charlie has contributed ${contributions} times`)
   })
-
 ```
