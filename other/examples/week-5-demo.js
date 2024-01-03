@@ -15,5 +15,5 @@ let newThing = Math.max(...arr.map(name => name.length))
 // example 2 (in an object: changing and adding values without fully changing the original object):
 const obj = {name: "Steve", occupation: "Steveishness"}
 
-let newThing = {...obj, age: 27, occupation: "Uber Driver"}
+// let newThing = {...obj, age: 27, occupation: "Uber Driver"}
 
