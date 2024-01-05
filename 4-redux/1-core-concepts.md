@@ -7,8 +7,10 @@
 
 ## Store
 - Manages the global state.
+- Single source of truth, meaning all state data is stored in one place.
+- App state is represented as a plain JavaScript object within the store
 
 
-## Actions
+### Actions
 
-## Reducers
+### Reducers
