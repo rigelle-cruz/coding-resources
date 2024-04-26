@@ -141,6 +141,17 @@ console.log(sentence.indexOf("?"))
 "haha that is so funny!".indexOf("h")
 //returns 0
 //should return the index of the first letter that is specified
-
 ```
 
+## .slice()
+
+Example:
+```js
+let msg = "what is your name?"
+console.log(msg.slice(5))
+//prints "is your name?"
+
+// .slice(index, endIndex)
+console.log(msg.slice(5, 10))
+//prints "is yo"
+```
