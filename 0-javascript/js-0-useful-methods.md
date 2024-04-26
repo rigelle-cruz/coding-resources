@@ -155,3 +155,16 @@ console.log(msg.slice(5))
 console.log(msg.slice(5, 10))
 //prints "is yo"
 ```
+
+## .replace(searchValue, replaceValue)
+
+Example:
+```js
+let expression = "hello how are you?"
+expression.replace("hello", "hey!")
+//returns "hey! how are you?"
+
+// .splice(start, deleteCount, item1, item2, ...)-------//
+// can insert and remove multiple things
+
+```
