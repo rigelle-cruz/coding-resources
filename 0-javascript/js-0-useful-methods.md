@@ -131,3 +131,16 @@ const odds = nums.filter(n => { // n represents each number
 }) // returns [9, 7, 5, 3, 1]
 ```
 
+## .indexOf()
+
+Example:
+```js
+let sentence = "what's in the sky?"
+console.log(sentence.indexOf("?"))
+//prints 17
+"haha that is so funny!".indexOf("h")
+//returns 0
+//should return the index of the first letter that is specified
+
+```
+
