@@ -168,3 +168,59 @@ expression.replace("hello", "hey!")
 // can insert and remove multiple things
 
 ```
+
+## .sort()
+- When using .sort() = it sorts the first letter
+- First numerical value of each element in ascending order
+
+Example:
+```js
+const months = ['March', 'Jan', 'Feb', 'Dec'];
+months.sort();
+console.log(months);
+// Expected output: Array ["Dec", "Feb", "Jan", "March"] 
+// D, F, J, M
+
+const array1 = [1, 30, 4, 21, 100000];
+array1.sort();
+console.log(array1);
+// Expected output: Array [1, 100000, 21, 30, 4]
+// 1, 1, 2, 3, 4
+
+//You can sort an array of numbers in ascending or descending order
+
+//ascending
+function compareNumbers(a, b) {
+  return a - b;
+}
+array1.sort(compareNumbers)
+
+//descending
+function compareNumbers(a, b) {
+  return b - a;
+}
+array1.sort(compareNumbers)
+```
+
+## setTimeout()
+setTimeout(handler: Timer Handler, timeout?: number,
+... arguments: any[]: number)
+
+Example:
+```js
+console.log("HELLOOO!!!...") //runs out immediately
+setTimeout(() => {
+  console.log("... are you still there?")
+}, 3000) // runs after 3000 miliseconds it will call the function
+```
+
+## setInterval()
+
+```js
+const id = setInterval(() => {
+  console.log(Math.random())
+}, 2000); // runs every 2000 miliseconds
+
+// you can stop it by giving it an id
+clearInterval(id)
+```
