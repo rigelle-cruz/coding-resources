@@ -1,28 +1,3 @@
-
-//Incrementing--------------------------------------------------------------//
-numberOfFriends += 3; //numberOfFriends is now 4
-
-//Making variables with let-------------------------------------------------//
-let numberOfFriends = 1;
-
-// Variables with const-----------------------------------------------------//
-const minimumAge = 21; //works like let but you CANNOT REASSIGN or change it!
-// when you know the value will never change
-
-//Naming Conventions--------------------------------------------------------//
-// Use upper camel-cased names:
-let numberOfChickens = 6; //GOOD
-// NOT THE JS WAY:
-// let number_of_chickens = 6;
-
-// Strings------------------------------------------------------------------//
-let greeting = "Hey!"
-//or
-let greetingTwo = `Hello there!`
-//adding variables within a string
-let greetingThree =  `${greeting} What did you say?`
-console.log(greetingThree) //outcome will be "Hey! What did you say?"
-
 //Indices & Length----------------------------------------------------------//
 let animal = "Dumbo Octopus"
 //to access a character
