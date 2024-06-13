@@ -88,19 +88,38 @@ let isHappy = true;
 ```
 
 ## Comparisons
-> greater than
-< less than
->= greater than or equal to
-<= less than or equal to
-== equality (doesn't care about type)
+> greater than <br> 
+< less than <br> 
+>= greater than or equal to <br> 
+<= less than or equal to <br> 
+
+== equality (doesn't care about type) 
 ```js
   1 == "1" // returns true
   1 == 1 // returns true
   ```
-!= not equal
-=== strict equality (cares about type)
+!= not equal <br> 
+=== strict equality (cares about type) <br> 
 ```js
   1 === "1" // returns false
   1 === 1 // returns true 
   ```
-!== strict non-equality
+!== strict non-equality 
+
+## Logical Operators
+&& <br> 
+Logical AND <br> 
+Example:
+```js
+true && true // returns true
+true && false // returns false
+
+// both parts need to be true
+const writtenPassword = prompt("Enter your password");
+
+if (writtenPassword.length >= 6 && writtenPassword.indexOf(" ") === -1){
+  console.log("VALID PASSWORD")
+} else {
+  console.log("INCORRECT FORMAT FOR PASSWORD!")
+}
+```
