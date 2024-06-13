@@ -59,4 +59,31 @@ console.log(greetingThree) //outcome will be "Hey! What did you say?"
 
 ```
 
+## Indices & Length
+```js
+let animal = "Dumbo Octopus"
+//to access a character
+animal[0] //to access "D" in the string
+
+//to find the length
+animal.length
+"lol".length
+```
+
+## Undefined & Null
+```js
+// Null
+//Example:
+// No one is logged in yet...
+let loggedInUser = null; //value is explicitly nothing (can be set)
+// A user logs in...
+loggedInUser = "Alan Rickman";
+```
+
+## Booleans - true or false values
+```js
+true;
+false;
+let isHappy = true;
+```
 
