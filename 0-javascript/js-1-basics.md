@@ -107,8 +107,9 @@ let isHappy = true;
 !== strict non-equality 
 
 ## Logical Operators
-&& <br> 
-Logical AND <br> 
+
+### && (Logical AND)
+
 Example:
 ```js
 true && true // returns true
@@ -122,4 +123,61 @@ if (writtenPassword.length >= 6 && writtenPassword.indexOf(" ") === -1){
 } else {
   console.log("INCORRECT FORMAT FOR PASSWORD!")
 }
+```
+
+### || (Logical OR)
+
+Only one side needs to be true!
+
+Example:
+
+```js
+1 !== 1 || 10 === 10 //true
+10/2 === 5 || null //true
+0 || undefined //false
+```
+
+Another Example:
+
+```js
+//0-5 free
+//5-10 $10
+//10-65 $20
+//65+ free
+
+const age = prompt("Enter your age");
+if ((age >= 0 && age < 5) || age >= 65) {
+  console.log("FREE");
+} else if (age >= 5 && age < 10) {
+  console.log("$10")
+} else if (age >= 10 && age < 65) {
+  console.log("$20")
+} else {
+  console.log("INVALID AGE!")
+}
+//note: can add parentheses to make sure that a condition runs first
+
+```
+
+### ! (Logical NOT)
+
+Example:
+```js
+false //false
+!false //true
+```
+
+Another Example:
+```js
+prompt("enter your first name");
+if(!firstName) {
+  firstName = prompt("TRY AGAIN!");
+}
+//note: if not something...
+
+const num = 8;
+if(!(num >= 0 && num < 5 || num >=65)) {
+  console.log("YOU'RE NOT IN THE NUM RANGE!")
+}
+//returns "YOU'RE NOT IN THE NUM RANGE!"
 ```
