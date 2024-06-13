@@ -87,3 +87,20 @@ false;
 let isHappy = true;
 ```
 
+## Comparisons
+> greater than
+< less than
+>= greater than or equal to
+<= less than or equal to
+== equality (doesn't care about type)
+```js
+  1 == "1" // returns true
+  1 == 1 // returns true
+  ```
+!= not equal
+=== strict equality (cares about type)
+```js
+  1 === "1" // returns false
+  1 === 1 // returns true 
+  ```
+!== strict non-equality
