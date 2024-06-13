@@ -220,3 +220,36 @@ console.log(colourSchemes)
 // length: 3 
 
 ```
+
+## Important Array Methods
+
+### push(value)
+Adds value to the END of an array <br>
+Example:
+```js
+let movieLine = ["tom", "nancy"]
+movieLine[2] = "pablo" //too long
+
+//so instead use push() method:
+movieLine.push('pablo')
+//returns a new array ["tom", "nancy", "pablo"]
+
+```
+
+### pop() 
+Removes and returns last value in array <br>
+Example:
+```js
+movieLine.pop()
+//returns "pablo"
+```
+
+### unshift(value)
+Adds value to START of an array <br>
+```js
+movieLine.unshift("VIP")
+//returns ["VIP", "tom", "nancy", "pablo"]
+```
+
+### shift(value)
+Removes and returns first element in an array
