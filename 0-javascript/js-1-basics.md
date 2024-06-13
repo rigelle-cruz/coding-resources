@@ -180,4 +180,43 @@ if(!(num >= 0 && num < 5 || num >=65)) {
   console.log("YOU'RE NOT IN THE NUM RANGE!")
 }
 //returns "YOU'RE NOT IN THE NUM RANGE!"
+
+```
+
+## Making An Array
+
+```js
+const colors = ["red", "orange", "yellow"];
+```
+
+To make an empty array
+```js
+let emptyArray = []
+```
+
+Arrays are indexed like strings:
+```js
+colors[0]; // "red"
+```
+
+They have a length:
+```js
+colors.length; //3
+```
+
+Arrays within arrays:
+```js
+const colourOne = ["red", "orange", "yellow"];
+const colourTwo = ["black", "pink", "blue"];
+const colourThree = ["violet", "white", "yellow"];
+
+const colourSchemes = [colourOne, colourTwo, colourThree];
+
+console.log(colourSchemes) 
+//(3) [Array(3), Array(3), Array(3)]
+// 0 : (3) ['red', 'orange', 'yellow']
+// 1 : (3) ['black', 'pink', 'blue']
+// 2 : (3) ['violet', 'white', 'yellow']
+// length: 3 
+
 ```
