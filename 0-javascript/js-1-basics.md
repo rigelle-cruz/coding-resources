@@ -253,3 +253,27 @@ movieLine.unshift("VIP")
 
 ### shift(value)
 Removes and returns first element in an array
+
+## To make an object literal
+```js
+const dog = {
+  name: "Rusty",
+  breed: "unknown",
+  isAlive: false,
+  age: 7
+}
+```
+
+All keys will be turned into strings! <br><br>
+
+To retrieve a value:
+```js
+dog.age; //7
+dog["age"]; //7
+```
+
+Updating values:
+```js
+dog.breed = "mutt";
+dog["age"] = 8;
+```
