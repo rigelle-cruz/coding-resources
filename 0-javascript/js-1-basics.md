@@ -31,3 +31,32 @@ let numberOfFriends = 1;
 const minimumAge = 21;
 ```
 
+## Naming Conventions
+- Use upper camel-case names
+```js
+let numberOfChickens = 6; //GOOD
+
+// NOT THE JS WAY:
+// let number_of_chickens = 6;
+
+```
+
+## Strings
+
+```js
+let greeting = "Hey!"
+```
+or
+
+```js
+let greetingTwo = `Hello there!`
+```
+Adding variables within a string
+
+```js
+let greetingThree =  `${greeting} What did you say?`
+console.log(greetingThree) //outcome will be "Hey! What did you say?"
+
+```
+
+
