@@ -277,3 +277,17 @@ Updating values:
 dog.breed = "mutt";
 dog["age"] = 8;
 ```
+
+## Nesting Arrays & Objects
+
+Arrays and objects usually go along side each other 
+
+```js
+const comments = [
+  {username: "Tammy", text: "lolololol", votes: 9},
+  {username:"FishBoi", text: "glob glob", votes: 12378}
+]
+
+// To access:
+comments[1].text // "glob glob"
+```
