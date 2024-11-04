@@ -43,4 +43,27 @@
 
 ## Architecture of .NET Applications
 
+### Classes
+
+- Building blocks
+- Is a container that contains data attributes and functions (methods)
 - Classes are responsible for each functionality
+- Example:
+
+  ```
+  Car (NOTE: Think of it as a class)
+
+  Data Attributes:
+  Make
+  Model
+  Colour
+
+  Functions:
+  Start()
+  Move()
+  ```
+
+- A way to organise many classes is using by a Namespace
+  - Namespaces: Each containing many related classes
+- Assembly (DDL(Dynamically Linked Library) or EXE)
+  - A way to organise Namespaces
