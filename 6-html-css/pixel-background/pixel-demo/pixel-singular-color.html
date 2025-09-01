@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .pixel-background {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 50px);
+        grid-auto-rows: 50px;
+      }
+
+      .pixel {
+        background: #fff;
+        width: 50px;
+        height: 50px;
+        opacity: 0.5;
+        animation: blink 5s infinite;
+      }
+
+      @keyframes blink {
+        0% {
+          opacity: 0;
+        }
+        25% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 0.5;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
+    <title>Pixel Background</title>
+  </head>
+  <body style="background: #222">
+    <div class="pixel-background" id="pixelBackground"></div>
+    <script>
+      const pixelBackground = document.getElementById('pixelBackground');
+      const numPixels = 5000; // Adjust for more or fewer pixels
+
+      for (let i = 0; i < numPixels; i++) {
+        const pixel = document.createElement('div');
+        pixel.className = 'pixel';
+        const randomDelay = Math.random() * 5; // Randomize animation start
+        pixel.style.animationDelay = `${randomDelay}s`;
+        pixelBackground.appendChild(pixel);
+      }
+    </script>
+  </body>
+</html>
